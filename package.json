@@ -1,0 +1,19 @@
+{
+  "name": "monte-carlo-pi",
+  "version": "1.0.0",
+  "description": "Visualizing the calculation of Pi using the Monte Carlo Simulation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreskemeny/monte-carlo-pi.git"
+  },
+  "author": "Andres Kemeny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreskemeny/monte-carlo-pi/issues"
+  },
+  "homepage": "https://github.com/andreskemeny/monte-carlo-pi#readme"
+}
