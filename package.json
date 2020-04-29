@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Visualizing the calculation of Pi using the Monte Carlo Simulation",
   "author": "Andres Kemeny",
-  "homepage": "http://andreskemeny.github.io/monte-carlo-pi",
+  "homepage": "https://andreskemeny.github.io/monte-carlo-pi/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andreskemeny/monte-carlo-pi.git"
