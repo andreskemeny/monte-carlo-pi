@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/monte-carlo-pi/precache-manifest.53eb22313c9d0f749f27b24a07128986.js"
+  "/monte-carlo-pi/precache-manifest.62b885460f5fccec0d26539c97034e47.js"
 );
 
 self.addEventListener('message', (event) => {
