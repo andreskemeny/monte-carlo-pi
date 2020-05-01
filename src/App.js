@@ -97,7 +97,7 @@ class App extends Component {
             layout={{
               width: 800,
               height: 800,
-              title: 'Trying to demonstrate estimation of Pi with Monte Carlo algorithm',
+              title: 'Estimating Pi using the Monte Carlo Simulation',
               shapes: [
                 {
                   type: 'circle',
