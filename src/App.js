@@ -121,7 +121,7 @@ class App extends Component {
         <div className="controls">
           {calculating ?
             <div style={{margin: "16px 0"}}>
-              Iterations: <input disabled value={iterations} /> 
+              Iterations: <input value={iterations} disabled /> 
             </div> :
             <div style={{margin: "16px 0"}}>
               Iterations: <input value={iterations} onChange={this.handleIterationsChange} /> 
