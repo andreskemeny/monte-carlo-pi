@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "23e414ceb3d179b3ee31b2cb02af3b32",
+    "revision": "da08dbe63314fe142a1bd01d7d13436c",
     "url": "/monte-carlo-pi/index.html"
   },
   {
