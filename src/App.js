@@ -7,12 +7,13 @@ class App extends Component {
   constructor(props) {
 		super(props);
 		this.state = {
-      x_in_circle: [],
-      y_in_circle: [],
-      x_outside_circle: [],
-      y_outside_circle: [],
+      coords_x_in_circle: [],
+      coords_y_in_circle: [],
+      coords_x_outside_circle: [],
+      coords_y_outside_circle: [],
       calculating: false,
       iterations: 0,
+      in_circle: 0,
       pi: 0
 		};
   }
@@ -34,18 +35,20 @@ class App extends Component {
 			.then(res => {
         const {
           pi,
-          x_in_circle,
-          y_in_circle,
-          x_outside_circle,
-          y_outside_circle
+          coords_x_in_circle,
+          coords_y_in_circle,
+          coords_x_outside_circle,
+          coords_y_outside_circle,
+          in_circle
         } = res.data;
 
         this.setState({
           pi: pi,
-          x_in_circle: x_in_circle,
-          y_in_circle: y_in_circle,
-          x_outside_circle: x_outside_circle,
-          y_outside_circle: y_outside_circle,
+          in_circle: in_circle,
+          coords_x_in_circle: coords_x_in_circle,
+          coords_y_in_circle: coords_y_in_circle,
+          coords_x_outside_circle: coords_x_outside_circle,
+          coords_y_outside_circle: coords_y_outside_circle,
           calculating: false
         });
       })
@@ -66,10 +69,11 @@ class App extends Component {
 			iterations,
       pi,
       calculating,
-      x_in_circle,
-      y_in_circle,
-      x_outside_circle,
-      y_outside_circle
+      coords_x_in_circle,
+      coords_y_in_circle,
+      coords_x_outside_circle,
+      coords_y_outside_circle,
+      in_circle
     } = this.state;
     
     return (
@@ -78,16 +82,16 @@ class App extends Component {
           <Plot
             data={[
               {
-                x: x_in_circle,
-                y: y_in_circle,
+                x: coords_x_in_circle,
+                y: coords_y_in_circle,
                 type: 'scatter',
                 mode: 'markers',
                 marker: {color: 'blue'},
                 name: "Inside",
               },
               {
-                x: x_outside_circle,
-                y: y_outside_circle,
+                x: coords_x_outside_circle,
+                y: coords_y_outside_circle,
                 type: 'scatter',
                 mode: 'markers',
                 marker: {color: 'red'},
@@ -132,7 +136,7 @@ class App extends Component {
         </div>
 
         <div className="controls" style={{marginTop: "-16px"}}>
-          <p>Points in circle: {x_in_circle.length} |</p>
+          <p>Points in circle: {in_circle} |</p>
           <p>&nbsp; Total Points: {iterations} |</p>
           <p>&nbsp; Estimation of Pi: {pi}</p>
         </div>
