@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d77a3432bbe1d31e206adcca80d1b09c",
+    "revision": "23e414ceb3d179b3ee31b2cb02af3b32",
     "url": "/monte-carlo-pi/index.html"
   },
   {
-    "revision": "a31b48f110cf02561023",
+    "revision": "0873373f7802b8cd6d96",
     "url": "/monte-carlo-pi/static/css/main.5a28c1d2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/monte-carlo-pi/static/js/2.c4a1e6f9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a31b48f110cf02561023",
-    "url": "/monte-carlo-pi/static/js/main.cbf91e63.chunk.js"
+    "revision": "0873373f7802b8cd6d96",
+    "url": "/monte-carlo-pi/static/js/main.ea1ed8ed.chunk.js"
   },
   {
     "revision": "b922a40b295433800eae",
