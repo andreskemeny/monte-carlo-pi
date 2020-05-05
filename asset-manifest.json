@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/monte-carlo-pi/static/css/main.5a28c1d2.chunk.css",
-    "main.js": "/monte-carlo-pi/static/js/main.78efa9f0.chunk.js",
-    "main.js.map": "/monte-carlo-pi/static/js/main.78efa9f0.chunk.js.map",
+    "main.js": "/monte-carlo-pi/static/js/main.cbf91e63.chunk.js",
+    "main.js.map": "/monte-carlo-pi/static/js/main.cbf91e63.chunk.js.map",
     "runtime-main.js": "/monte-carlo-pi/static/js/runtime-main.6256989d.js",
     "runtime-main.js.map": "/monte-carlo-pi/static/js/runtime-main.6256989d.js.map",
-    "static/js/2.77b59a63.chunk.js": "/monte-carlo-pi/static/js/2.77b59a63.chunk.js",
-    "static/js/2.77b59a63.chunk.js.map": "/monte-carlo-pi/static/js/2.77b59a63.chunk.js.map",
+    "static/js/2.c4a1e6f9.chunk.js": "/monte-carlo-pi/static/js/2.c4a1e6f9.chunk.js",
+    "static/js/2.c4a1e6f9.chunk.js.map": "/monte-carlo-pi/static/js/2.c4a1e6f9.chunk.js.map",
     "index.html": "/monte-carlo-pi/index.html",
-    "precache-manifest.6a99fde421095ed16f12b5630718ad35.js": "/monte-carlo-pi/precache-manifest.6a99fde421095ed16f12b5630718ad35.js",
+    "precache-manifest.72d43e7717c5cfddf9ab710beba76851.js": "/monte-carlo-pi/precache-manifest.72d43e7717c5cfddf9ab710beba76851.js",
     "service-worker.js": "/monte-carlo-pi/service-worker.js",
     "static/css/main.5a28c1d2.chunk.css.map": "/monte-carlo-pi/static/css/main.5a28c1d2.chunk.css.map",
-    "static/js/2.77b59a63.chunk.js.LICENSE.txt": "/monte-carlo-pi/static/js/2.77b59a63.chunk.js.LICENSE.txt"
+    "static/js/2.c4a1e6f9.chunk.js.LICENSE.txt": "/monte-carlo-pi/static/js/2.c4a1e6f9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6256989d.js",
-    "static/js/2.77b59a63.chunk.js",
+    "static/js/2.c4a1e6f9.chunk.js",
     "static/css/main.5a28c1d2.chunk.css",
-    "static/js/main.78efa9f0.chunk.js"
+    "static/js/main.cbf91e63.chunk.js"
   ]
 }
