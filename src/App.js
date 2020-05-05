@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./App.css"
 import Plot from 'react-plotly.js';
+import axios from "axios";
 
 class App extends Component {
   constructor(props) {
@@ -21,40 +22,39 @@ class App extends Component {
       calculating: true
     });
 
-    let x_in_circle = [];
-    let y_in_circle = [];
-    let x_outside_circle = [];
-    let y_outside_circle = [];
+    let data = {
+			iterations: parseInt(this.state.iterations)
+    };
 
-    for (let i = 0; i < this.state.iterations; i++) {
-      let x = Math.random();
-      let y = Math.random();
+    axios
+			.post(
+				"https://5hanl732i4.execute-api.us-east-1.amazonaws.com/prod/calc",
+				data
+			)
+			.then(res => {
+        const {
+          pi,
+          x_in_circle,
+          y_in_circle,
+          x_outside_circle,
+          y_outside_circle
+        } = res.data;
 
-      let distance = (x**2) + (y**2);
-
-      if (distance <= 1) {
-        x_in_circle.push(x);
-        y_in_circle.push(y);
-      } else {
-        x_outside_circle.push(x);
-        y_outside_circle.push(y);
-      }
-    }
-
-    let pi = 0;
-
-    if (this.state.iterations) {
-      pi = 4 * x_in_circle.length/this.state.iterations;
-    } 
-
-    this.setState({
-      pi: pi,
-      x_in_circle: x_in_circle,
-      y_in_circle: y_in_circle,
-      x_outside_circle: x_outside_circle,
-      y_outside_circle: y_outside_circle,
-      calculating: false
-    });
+        this.setState({
+          pi: pi,
+          x_in_circle: x_in_circle,
+          y_in_circle: y_in_circle,
+          x_outside_circle: x_outside_circle,
+          y_outside_circle: y_outside_circle,
+          calculating: false
+        });
+      })
+      .catch(err => {
+        console.log(err)
+        this.setState({
+          calculating: false
+        });
+      });
   }
 
   handleIterationsChange = (event) => {
@@ -122,6 +122,7 @@ class App extends Component {
           {calculating ?
             <div style={{margin: "16px 0"}}>
               Iterations: <input value={iterations} disabled /> 
+              <button className="button" disabled>Calculating...</button>
             </div> :
             <div style={{margin: "16px 0"}}>
               Iterations: <input value={iterations} onChange={this.handleIterationsChange} /> 
@@ -140,6 +141,8 @@ class App extends Component {
           <p>
             <i style={{color: "gray"}}>
               The more iterations the more it will take to load, but the more precise the estimate will be.
+              <br />
+              The max amount of points displayed in the plot is 10,000 because of performance issues.
             </i>
           </p>
         </div>
